@@ -27,7 +27,7 @@ header .left-img-title, header .right-img-title{
     width:70%;
     max-width:70%;
     margin: 0 auto;
-    height:450px;
+    height:56.5vh;
     border:2px solid #7ca76e;
     background-image: url('./imgs/index/pokeBackground.png');
     background-position: center;
@@ -96,7 +96,7 @@ header .left-img-title, header .right-img-title{
 }
 
 .pokemon-lists-div .pokemon-div{
-    width:20%;
+    width:17%;
     height:29vh;
     border:1px solid black;
 }
@@ -114,7 +114,7 @@ header .left-img-title, header .right-img-title{
     .draft-div{
         width:100%;
         max-width:100%;
-        height:300px;
+        height:70vh;
     }
 
     .draft-div .draft-picks-div .draft-players-div{
@@ -154,7 +154,7 @@ header .left-img-title, header .right-img-title{
     .draft-div{
         width:100%;
         max-width:100%;
-        height:200px;
+        height:30vh;
     }
 
     .draft-div .draft-picks-div .draft-players-div{
@@ -172,11 +172,21 @@ header .left-img-title, header .right-img-title{
         left:44.5%;
         width:10%;
         height:6%;
-        margin-top:16%;
+        margin-top:18%;
     }
 
     .pokemon-lists-div{
         width:100%;
         max-width:100%;
+        /* flex-direction: column;
+        align-items: center;
+        justify-content: space-around; */
+        display:block;
+    }
+
+    .pokemon-lists-div .pokemon-div{
+        display:inline-block;
+        width:30%;
+        height:20vh;
     }
 }
