@@ -1,0 +1,182 @@
+body{
+    margin:0;
+    font-size: 1.125rem;
+}
+
+header{
+    width:70%;
+    max-width:70%;
+    margin: 0 auto;
+    border:2px solid #7ca76e;
+    display:flex;
+}
+
+header .img-title{
+    height:100px;
+}
+
+header .center-img-title{
+    width:70%;
+}
+
+header .left-img-title, header .right-img-title{
+    width:15%;
+}
+
+.draft-div{
+    width:70%;
+    max-width:70%;
+    margin: 0 auto;
+    height:450px;
+    border:2px solid #7ca76e;
+    background-image: url('./imgs/index/pokeBackground.png');
+    background-position: center;
+    background-size: 100% 100%;
+}
+
+.draft-div .draft-picks-div{
+    width:100%;
+    display:flex;
+    justify-content: space-evenly;
+    height:80%;
+    /* height:46vh; */
+}
+
+.draft-div .draft-picks-div .draft-players-div{
+    width:35%;
+    height:60%;
+    border: 1px solid gray;
+    border-radius: 15px;
+    margin-top:10%;
+}
+
+
+.draft-div .draft-picks-div .draft-players-h1{
+    font-size: 8rem;
+    font-family: Agency FB;
+	font-weight: initial;
+	color: #f74702;
+    margin-top:15%;
+	text-shadow: 2px 2px 8px #FF0000;
+}
+
+.draft-div .draft-picks-div .draft-vs-img{
+    position: absolute;
+    /* top:40%; */
+    left:45.8%;
+    width:7%;
+    height:20%;
+    margin-top:10%;
+    /* margin:0 auto; */
+}
+
+.go-play-btn{
+    width:15%;
+    height:10%;
+    margin-left:41.5%;
+    background-color: #1670cb;
+	cursor: pointer;
+	border-radius: 15%;
+}
+
+.go-play-btn img{
+    width:100%;
+	height: 100%;
+	border-radius: 50%;
+	border:none;
+}
+
+.pokemon-lists-div{
+    width:70%;
+    max-width:70%;
+    margin: 0 auto;
+    border:2px solid #7ca76e;
+    display:flex;
+
+}
+
+.pokemon-lists-div .pokemon-div{
+    width:20%;
+    height:29vh;
+    border:1px solid black;
+}
+
+@media (max-width:750px) and (min-width:420px){
+    header{
+        width:100%;
+        max-width:100%;
+    }
+
+    header .img-title{
+        height:60px;
+    }
+
+    .draft-div{
+        width:100%;
+        max-width:100%;
+        height:300px;
+    }
+
+    .draft-div .draft-picks-div .draft-players-div{
+        margin-top:5%;
+        height:65%;
+        width:37%
+    }
+
+    .draft-div .draft-picks-div .draft-players-h1{
+        font-size: 3rem;
+        margin-top:12%;
+    }
+
+    .draft-div .draft-picks-div .draft-vs-img{
+        left:44.5%;
+        width:10%;
+        height:15%;
+        margin-top:11%;
+    }
+
+    .pokemon-lists-div{
+        width:100%;
+        max-width:100%;
+    }
+}
+
+@media (max-width:419px){
+    header{
+        width:100%;
+        max-width:100%;
+    }
+
+    header .img-title{
+        height:40px;
+    }
+
+    .draft-div{
+        width:100%;
+        max-width:100%;
+        height:200px;
+    }
+
+    .draft-div .draft-picks-div .draft-players-div{
+        margin-top:10%;
+        height:60%;
+        width:35%
+    }
+
+    .draft-div .draft-picks-div .draft-players-h1{
+        font-size: 2rem;
+        margin-top:17%;
+    }
+
+    .draft-div .draft-picks-div .draft-vs-img{
+        left:44.5%;
+        width:10%;
+        height:6%;
+        margin-top:16%;
+    }
+
+    .pokemon-lists-div{
+        width:100%;
+        max-width:100%;
+    }
+}
