@@ -138,6 +138,19 @@ header .left-img-title, header .right-img-title{
     .pokemon-lists-div{
         width:100%;
         max-width:100%;
+        /* flex-direction: column;
+        align-items: center;
+        justify-content: space-around; */
+        display:block;
+    }
+
+    .pokemon-lists-div .pokemon-div{
+        display:inline-block;
+        margin:0;
+        padding:0;
+        width:30%;
+        height:40vh;
+        margin-left:1.8%;
     }
 }
 
@@ -186,7 +199,10 @@ header .left-img-title, header .right-img-title{
 
     .pokemon-lists-div .pokemon-div{
         display:inline-block;
+        margin:0;
+        padding:0;
         width:30%;
         height:20vh;
+        margin-left:5px;
     }
 }
