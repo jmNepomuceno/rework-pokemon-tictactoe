@@ -48,6 +48,8 @@ header .left-img-title, header .right-img-title{
     border: 1px solid gray;
     border-radius: 15px;
     margin-top:10%;
+    background-size: 100% 100%;
+    background-position:center;
 }
 
 
@@ -117,7 +119,16 @@ header .left-img-title, header .right-img-title{
     border-radius: 10px;
 }
 
-@media (max-width:750px) and (min-width:420px){
+/* 
+$mobile : 576px;
+$tablet : 768px;
+$laptop : 992px;
+$desktop : 1200px;
+*/
+
+/* @media (max-width:750px) and (min-width:420px){ */
+@media (max-width:768px){
+
     header{
         width:100%;
         max-width:100%;
@@ -170,7 +181,7 @@ header .left-img-title, header .right-img-title{
     }
 }
 
-@media (max-width:419px){
+@media (max-width:576px){
     header{
         width:100%;
         max-width:100%;

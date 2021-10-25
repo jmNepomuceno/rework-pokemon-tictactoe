@@ -2,6 +2,10 @@ const pokeball_img = document.querySelectorAll('.pokemon-lists-div .pokemon-div 
 const pokemon_img = document.querySelectorAll('.pokemon-lists-div .pokemon-div .pokemon-img')
 let imgHover
 
+const p1_img_div = document.querySelector('.draft-div .draft-picks-div .player-one-div')
+const p2_img_div = document.querySelector('.draft-div .draft-picks-div .player-two-div')
+
+
 const imageSliderIn = (index) =>{
     pokeball_img[index].src = "css/imgs/index/pokeballRoll.gif"
     pokemon_img[index].style.cursor = 'pointer'
@@ -61,7 +65,7 @@ const imageSliderIn = (index) =>{
         i += 1
 
         if(i == 3) i = 0
-    },700)
+    },600)
 }
 
 const imageSliderOut = (index) =>{
@@ -71,8 +75,38 @@ const imageSliderOut = (index) =>{
     clearInterval(imgHover);
 }
 
-for(let i = 0; i < pokeball_img.length; i++){
-    pokemon_img[i].addEventListener('mouseover' , ()=> { imageSliderIn(i) }, false)
-    pokemon_img[i].addEventListener('mouseout' , ()=> { imageSliderOut(i) }, false)
+const imageClick = (index) =>{
+    let char_img_index = ""
+    if(index == 0){
+        char_img_index = "css/imgs/index/pikachuMain.jpg"
+    }else if(index == 1){
+        char_img_index = "css/imgs/index/bulbasaurMain.jpg"
+    }else if(index == 2){
+        char_img_index = "css/imgs/index/charmanderMain.jpg"
+    }else if(index == 3){
+        char_img_index = "css/imgs/index/squirtleMain.jpg"
+    }else if(index == 4){
+        char_img_index = "css/imgs/index/chimcharMain.jpg"
+    }else if(index == 5){
+        char_img_index = "css/imgs/index/piplupMain.jpg"
+    }
+    
+    
+    if(!p1_img_div.style.backgroundImage){
+        p1_img_div.style.backgroundImage = "url(" + char_img_index + ")"   
+    }else{
+        p2_img_div.style.backgroundImage = "url(" + char_img_index + ")"   
+    }
 
+    pokemon_img[index].style.pointerEvents = 'none'
+    pokeball_img[index].src = "css/imgs/index/pokeball2.png"
+
+}
+
+const main = () =>{
+    for(let i = 0; i < pokeball_img.length; i++){
+        pokemon_img[i].addEventListener('mouseover' , ()=> { imageSliderIn(i) }, false)
+        pokemon_img[i].addEventListener('mouseout' , ()=> { imageSliderOut(i) }, false)
+        pokemon_img[i].addEventListener('click', ()=>{imageClick(i)}, false)
+    }
 }
