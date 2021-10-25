@@ -79,6 +79,7 @@ header .left-img-title, header .right-img-title{
     background-color: #1670cb;
 	cursor: pointer;
 	border-radius: 15%;
+    pointer-events: none;
 }
 
 .go-play-btn img{

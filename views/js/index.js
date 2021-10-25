@@ -4,6 +4,9 @@ let imgHover
 
 const p1_img_div = document.querySelector('.draft-div .draft-picks-div .player-one-div')
 const p2_img_div = document.querySelector('.draft-div .draft-picks-div .player-two-div')
+let clicked_img = false
+
+const play_btn = document.querySelector('.go-play-btn')
 
 
 const imageSliderIn = (index) =>{
@@ -73,6 +76,12 @@ const imageSliderOut = (index) =>{
     pokemon_img[index].style.cursor = 'default'
 
     clearInterval(imgHover);
+    // console.log(pokeball_img[index].src)
+    if(clicked_img){
+        pokeball_img[index].src = "css/imgs/index/pokeball2.png"
+        clicked_img = false
+    }
+
 }
 
 const imageClick = (index) =>{
@@ -96,10 +105,11 @@ const imageClick = (index) =>{
         p1_img_div.style.backgroundImage = "url(" + char_img_index + ")"   
     }else{
         p2_img_div.style.backgroundImage = "url(" + char_img_index + ")"   
+        play_btn.style.pointerEvents = "auto"
     }
 
     pokemon_img[index].style.pointerEvents = 'none'
-    pokeball_img[index].src = "css/imgs/index/pokeball2.png"
+    clicked_img = true
 
 }
 
