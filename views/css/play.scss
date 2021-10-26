@@ -69,6 +69,15 @@ label{
             background-image: url('./imgs/arena/border.png');
             background-position: center;
             background-size: 100% 100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                border-radius: 50%;
+                width:75%;
+                height:75%;
+            }
         }
 
         &__health{
@@ -96,7 +105,7 @@ label{
                 letter-spacing:1px;
             }
 
-            div{
+            .bar-div{
                 position: absolute;
                 bottom: 0;
                 left:15%;
@@ -104,6 +113,13 @@ label{
                 height:30%;
                 border:1px solid white;
                 border-radius: 10px;
+
+                .health-div{
+                    width:100%;
+                    height:100%;
+                    background-color: #56ca7c;
+                    border-radius: 7px;
+                }
             }
         }
     }
@@ -149,6 +165,15 @@ label{
             background-image: url('./imgs/arena/border.png');
             background-position: center;
             background-size: 100% 100%;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+
+            img{
+                border-radius: 50%;
+                width:75%;
+                height:75%;
+            }
         }
 
         &__health{
@@ -175,7 +200,7 @@ label{
                 letter-spacing:1px;
             }
 
-            div{
+            .bar-div{
                 position: absolute;
                 bottom: 0;
                 right:15%;
@@ -183,6 +208,13 @@ label{
                 height:30%;
                 border:1px solid white;
                 border-radius: 10px;
+
+                .health-div{
+                    width:100%;
+                    height:100%;
+                    background-color: #56ca7c;
+                    border-radius: 7px;
+                }
             }
         }
     }

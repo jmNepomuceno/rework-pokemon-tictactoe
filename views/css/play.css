@@ -88,6 +88,21 @@ label {
   background-image: url("./imgs/arena/border.png");
   background-position: center;
   background-size: 100% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.arena-div__p1-div__icon img {
+  border-radius: 50%;
+  width: 75%;
+  height: 75%;
 }
 
 .arena-div__p1-div__health {
@@ -116,7 +131,7 @@ label {
   letter-spacing: 1px;
 }
 
-.arena-div__p1-div__health div {
+.arena-div__p1-div__health .bar-div {
   position: absolute;
   bottom: 0;
   left: 15%;
@@ -124,6 +139,13 @@ label {
   height: 30%;
   border: 1px solid white;
   border-radius: 10px;
+}
+
+.arena-div__p1-div__health .bar-div .health-div {
+  width: 100%;
+  height: 100%;
+  background-color: #56ca7c;
+  border-radius: 7px;
 }
 
 .arena-div__battle-div {
@@ -181,6 +203,21 @@ label {
   background-image: url("./imgs/arena/border.png");
   background-position: center;
   background-size: 100% 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.arena-div__p2-div__icon img {
+  border-radius: 50%;
+  width: 75%;
+  height: 75%;
 }
 
 .arena-div__p2-div__health {
@@ -208,7 +245,7 @@ label {
   letter-spacing: 1px;
 }
 
-.arena-div__p2-div__health div {
+.arena-div__p2-div__health .bar-div {
   position: absolute;
   bottom: 0;
   right: 15%;
@@ -216,6 +253,13 @@ label {
   height: 30%;
   border: 1px solid white;
   border-radius: 10px;
+}
+
+.arena-div__p2-div__health .bar-div .health-div {
+  width: 100%;
+  height: 100%;
+  background-color: #56ca7c;
+  border-radius: 7px;
 }
 
 @media (max-width: 768px) {

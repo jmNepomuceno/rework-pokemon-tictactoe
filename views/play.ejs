@@ -17,17 +17,23 @@
 
     <main class="main">
         <!-- hidden -->
-        <label> <%= characters.p1 %> </label>
-        <label> <%= characters.p2 %> </label>
+        <label><%= characters.p1 %></label>
+        <label><%= characters.p2 %></label>
 
         <div class="arena-div">
+
             <div class="arena-div__p1-div">
-                <div class="arena-div__p1-div__icon char_icon"></div>
-                <div class="arena-div__p1-div__health">
-                    <img src="css/imgs/arena/pikachuIcon.png" alt="image">
-                    <h1>PIKACHU</h1>
-                    <div> </div>
+
+                <div class="arena-div__p1-div__icon char_icon">
+                    <img src="" alt="image">
                 </div>
+
+                <div class="arena-div__p1-div__health">
+                    <img class="mini-icon" src="" alt="image">
+                    <h1>PIKACHU</h1>
+                    <div class="bar-div"> <div class="health-div"></div> </div>
+                </div>
+
             </div>
 
             <div class="arena-div__battle-div">
@@ -49,12 +55,17 @@
             </div>
 
             <div class="arena-div__p2-div">
-                <div class="arena-div__p2-div__icon char_icon"></div>
-                <div class="arena-div__p2-div__health">
-                    <img src="css/imgs/arena/pikachuIcon.png" alt="image">
-                    <h1>PIKACHU</h1>
-                    <div> </div>
+
+                <div class="arena-div__p2-div__icon char_icon">
+                    <img src="" alt="image">
                 </div>
+
+                <div class="arena-div__p2-div__health">
+                    <img class="mini-icon" src="" alt="image">
+                    <h1>PIKACHU</h1>
+                    <div class="bar-div"> <div class="health-div"></div> </div>
+                </div>
+
             </div>
         </div>
 
