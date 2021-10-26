@@ -7,7 +7,7 @@ const p2_img_div = document.querySelector('.draft-div .draft-picks-div .player-t
 let clicked_img = false
 
 const play_btn = document.querySelector('.go-play-btn')
-
+const txt_input = document.querySelectorAll('.hidden-input')
 
 const imageSliderIn = (index) =>{
     pokeball_img[index].src = "css/imgs/index/pokeballRoll.gif"
@@ -86,26 +86,36 @@ const imageSliderOut = (index) =>{
 
 const imageClick = (index) =>{
     let char_img_index = ""
+    let char_name = ""
     if(index == 0){
         char_img_index = "css/imgs/index/pikachuMain.jpg"
+        char_name = "Pikachu"
     }else if(index == 1){
         char_img_index = "css/imgs/index/bulbasaurMain.jpg"
+        char_name = "Bulbasaur"
     }else if(index == 2){
         char_img_index = "css/imgs/index/charmanderMain.jpg"
+        char_name = "Charmander"
     }else if(index == 3){
         char_img_index = "css/imgs/index/squirtleMain.jpg"
+        char_name = "Squirtle"
     }else if(index == 4){
         char_img_index = "css/imgs/index/chimcharMain.jpg"
+        char_name = "Chimchar"
     }else if(index == 5){
         char_img_index = "css/imgs/index/piplupMain.jpg"
+        char_name = "Piplup"
     }
     
     
     if(!p1_img_div.style.backgroundImage){
         p1_img_div.style.backgroundImage = "url(" + char_img_index + ")"   
+        txt_input[0].value = char_name
     }else{
         p2_img_div.style.backgroundImage = "url(" + char_img_index + ")"   
         play_btn.style.pointerEvents = "auto"
+        txt_input[1].value = char_name
+
     }
 
     pokemon_img[index].style.pointerEvents = 'none'

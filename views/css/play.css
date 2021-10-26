@@ -44,6 +44,10 @@ main {
   background-color: #202743;
 }
 
+label {
+  display: none;
+}
+
 .arena-div {
   margin-top: 10%;
   height: 60%;
@@ -55,13 +59,11 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  border: 1px solid blue;
 }
 
 .arena-div__p1-div {
   width: 25%;
   height: 100%;
-  border: 1px solid green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -127,13 +129,34 @@ main {
 .arena-div__battle-div {
   width: 50%;
   height: 100%;
-  border: 1px solid green;
+  border: 1px solid white;
+}
+
+.arena-div__battle-div [class^="row-"] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 100%;
+  height: 33.33333%;
+}
+
+.arena-div__battle-div [class^="box-"] {
+  border: 1px solid #202743;
+  background-image: url("./imgs/arena/tilesTry.jpg");
+  background-position: center;
+  background-size: 100% 100%;
+  width: 33.33333%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .arena-div__p2-div {
   width: 25%;
   height: 100%;
-  border: 1px solid green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

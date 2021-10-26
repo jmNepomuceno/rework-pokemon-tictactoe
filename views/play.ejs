@@ -16,19 +16,40 @@
     </header>
 
     <main class="main">
+        <!-- hidden -->
+        <label> <%= characters.p1 %> </label>
+        <label> <%= characters.p2 %> </label>
 
         <div class="arena-div">
             <div class="arena-div__p1-div">
-                <div class="arena-div__p1-div__icon"></div>
+                <div class="arena-div__p1-div__icon char_icon"></div>
                 <div class="arena-div__p1-div__health">
                     <img src="css/imgs/arena/pikachuIcon.png" alt="image">
                     <h1>PIKACHU</h1>
                     <div> </div>
                 </div>
             </div>
-            <div class="arena-div__battle-div"></div>
+
+            <div class="arena-div__battle-div">
+                <div class="row-1">
+                    <div class="box-1"></div>
+                    <div class="box-2"></div>
+                    <div class="box-3"></div>
+                </div>
+                <div class="row-2">
+                    <div class="box-4"></div>
+                    <div class="box-5"></div>
+                    <div class="box-6"></div>
+                </div>
+                <div class="row-3">
+                    <div class="box-7"></div>
+                    <div class="box-8"></div>
+                    <div class="box-9"></div>
+                </div>
+            </div>
+
             <div class="arena-div__p2-div">
-                <div class="arena-div__p2-div__icon"></div>
+                <div class="arena-div__p2-div__icon char_icon"></div>
                 <div class="arena-div__p2-div__health">
                     <img src="css/imgs/arena/pikachuIcon.png" alt="image">
                     <h1>PIKACHU</h1>
@@ -40,4 +61,5 @@
     </main>
 
 </body>
+<script src="./js/play.js"></script>
 </html>

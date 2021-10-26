@@ -72,6 +72,10 @@ header .left-img-title, header .right-img-title{
     /* margin:0 auto; */
 }
 
+input{
+    display:none;
+}
+
 .go-play-btn{
     width:15%;
     height:10%;

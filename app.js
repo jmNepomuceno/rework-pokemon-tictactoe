@@ -9,7 +9,13 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/battle-arena', (req, res)=>{
-    res.render('play.ejs')
+    console.log(req.query)  
+    res.render('play.ejs' , {
+        characters : {
+            p1 : req.query.p1_character,
+            p2 : req.query.p2_character,
+        }
+    })
 })
 
 let port = process.env.PORT || 3000; 
