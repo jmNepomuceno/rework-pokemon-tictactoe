@@ -166,7 +166,7 @@ label {
   height: 33.33333%;
 }
 
-.arena-div__battle-div [class^="box-"] {
+.arena-div__battle-div [class^="boxes"] {
   border: 1px solid #202743;
   background-image: url("./imgs/arena/tilesTry.jpg");
   background-position: center;
@@ -174,6 +174,18 @@ label {
   width: 33.33333%;
   height: 100%;
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 7rem;
+  color: #ffe77a;
+  font-family: "Agency FB";
 }
 
 .arena-div__p2-div {

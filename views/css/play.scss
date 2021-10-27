@@ -137,7 +137,7 @@ label{
             //gap:30px
         }
 
-        [class ^="box-"]{
+        [class ^="boxes"]{
             border:1px solid #202743;
             background-image: url('./imgs/arena/tilesTry.jpg');
             background-position: center;
@@ -145,6 +145,12 @@ label{
             width:(100%) / 3;
             height:100%;
             cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 7rem;
+            color: rgb(255, 231, 122);
+            font-family: "Agency FB";
         }
     }
 
