@@ -164,159 +164,147 @@ const skillsX = {
 
 	"Squirtle" : {
 		h1 : {
-			width : "450px",
-			top : "25px",
-			left : "0px",
-			deg : "-180deg"
-		},
-		h2 : {
-			width : "450px",
-			top : "175px",
-			left : "0px",
-			deg : "-180deg"
-		},
-		h3 : {
-			width : "450px",
-			top : "325px",
-			left : "0px",
-			deg : "-180deg"
-		},
-
-		v1 : {
-			width : "450px",
-			top : "175px",
-			left : "-150px",
-			deg : "-90deg"
-		},
-		v2 : {
-			width : "450px",
-			top : "175px",
-			left : "0px",
-			deg : "-90deg"
-		},
-		v3 : {
-			width : "450px",
-			top : "175px",
-			left : "150px",
-			deg : "-90deg"
-		},
-
-		sL : {
-			width : "600px",
-			top : "170px",
-			left : "-75px",
-			deg : "225deg"
-		},
-		sR : {
-			width : "600px",
-			top : "175px",
-			left : "-75px",
-			deg : "-225deg"
-		}
-	},
-
-	4 : {
-		h1 : {
-			width : "500px",
-			top : "20px",
-			left : "0px",
+			top : "0",
+			left : "0",
 			deg : "0deg"
 		},
 		h2 : {
-			width : "500px",
-			top : "170px",
-			left : "0px",
+			top : "33.3%",
+			left : "0",
 			deg : "0deg"
 		},
 		h3 : {
-			width : "500px",
-			top : "320px",
-			left : "0px",
+			top : "66.6%",
+			left : "0",
 			deg : "0deg"
 		},
 
 		v1 : {
-			width : "500px",
-			top : "200px",
-			left : "-170px",
+			top : "30%",
+			left : "-33.3%",
 			deg : "90deg"
 		},
 		v2 : {
-			width : "500px",
-			top : "200px",
-			left : "-20px",
+			top : "30%",
+			left : "0px",
 			deg : "90deg"
 		},
 		v3 : {
-			width : "500px",
-			top : "200px",
-			left : "130px",
+			top : "30%",
+			left : "33.3%",
 			deg : "90deg"
 		},
 
 		sL : {
-			width : "670px",
-			top : "190px",
-			left : "-85px",
+			width : "125%",
+			top : "32%",
+			left : "-15%",
 			deg : "45deg"
 		},
 		sR : {
-			width : "670px",
-			top : "150px",
-			left : "-90px",
+			width : "125%",
+			top : "32%",
+			left : "-15%",
+			deg : "-45deg"
+		}
+	},
+
+	"Chimchar" : {
+		h1 : {
+			top : "0",
+			left : "0",
+			deg : "0deg"
+		},
+		h2 : {
+			top : "33.3%",
+			left : "0",
+			deg : "0deg"
+		},
+		h3 : {
+			top : "66.6%",
+			left : "0",
+			deg : "0deg"
+		},
+
+		v1 : {
+			top : "30%",
+			left : "-33.3%",
+			deg : "90deg"
+		},
+		v2 : {
+			top : "30%",
+			left : "0",
+			deg : "90deg"
+		},
+		v3 : {
+			top : "30%",
+			left : "33.3%",
+			deg : "90deg"
+		},
+
+		sL : {
+			width : "120%",
+			top : "30%",
+			left : "-10%",
+			deg : "45deg"
+		},
+		sR : {
+			width : "120%",
+			top : "30%",
+			left : "-10%",
 			deg : "-45deg"
 		}
 	},
 
 	5 : {
 		h1 : {
-			width : "550px",
-			top : "20px",
-			left : "-5px",
-			deg : "-10deg"
+			width : "130%",
+			top : "0",
+			left : "0",
+			deg : "-17deg"
 		},
 		h2 : {
-			width : "550px",
-			top : "175px",
-			left : "-5px",
-			deg : "-10deg"
+			width : "130%",
+			top : "30%",
+			left : "0",
+			deg : "-17deg"
 		},
 		h3 : {
-			width : "550px",
-			top : "330px",
-			left : "-5px",
-			deg : "-10deg"
+			width : "130%",
+			top : "65%",
+			left : "0",
+			deg : "-17deg"
 		},
 
 		v1 : {
-			width : "650px",
-			top : "270px",
-			left : "-255px",
-			deg : "82deg"
+			width : "130%",
+			top : "50%",
+			left : "-50%",
+			deg : "77deg"
 		},
 		v2 : {
-			width : "650px",
-			top : "270px",
-			left : "-105px",
-			deg : "82deg"
+			width : "130%",
+			top : "50%",
+			left : "-15%",
+			deg : "77deg"
 		},
 		v3 : {
-			width : "650px",
-			top : "270px",
-			left : "45px",
-			deg : "82deg"
+			width : "130%",
+			top : "50%",
+			left : "18%",
+			deg : "77deg"
 		},
 
 		sL : {
-			width : "800px",
-			top : "235px",
-			left : "-135px",
+			width : "170%",
+			top : "50%",
+			left : "-30%",
 			deg : "40deg"
 		},
 		sR : {
-			width : "800px",
-			top : "110px",
-			left : "-130px",
+			width : "170%",
+			top : "25%",
+			left : "-30%",
 			deg : "-55deg"
 		}
 	}
