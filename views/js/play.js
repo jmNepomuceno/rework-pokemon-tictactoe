@@ -62,113 +62,107 @@ const skillsX = {
 		}
 	},
 
-	1 : {
+	"Bulbasaur" : {
 		h1 : {
-			width : "450px",
-			top : "25px",
-			left : "0px",
+			top : "0",
+			left : "0",
 			deg : "0deg"
 		},
 		h2 : {
-			width : "450px",
-			top : "175px",
-			left : "0px",
+			top : "35%",
+			left : "0",
 			deg : "0deg"
 		},
 		h3 : {
-			width : "450px",
-			top : "325px",
-			left : "0px",
+			top : "70%",
+			left : "0",
 			deg : "0deg"
 		},
 
 		v1 : {
-			width : "463px",
-			top : "173px",
-			left : "-150px",
+			top : "30%",
+			left : "-33.5%",
 			deg : "90deg"
 		},
 		v2 : {
-			width : "463px",
-			top : "173px",
-			left : "0px",
+			top : "30%",
+			left : "0",
 			deg : "90deg"
 		},
 		v3 : {
-			width : "463px",
-			top : "173px",
-			left : "150px",
+			top : "30%",
+			left : "33.5%",
 			deg : "90deg"
 		},
 
 		sL : {
-			width : "550px",
-			top : "180px",
-			left : "-50px",
+			width : "120%",
+			top : "30%",
+			left : "-10%",
 			deg : "45deg"
 		},
 		sR : {
-			width : "550px",
-			top : "180px",
-			left : "-45px",
+			width : "120%",
+			top : "30%",
+			left : "-10%",
 			deg : "-45deg"
 		}
 	},
 
-	2 : {
+	"Charmander" : {
 		h1 : {
-			width : "450px",
-			top : "25px",
-			left : "0px",
+            width : "110%",
+			top : "0",
+			left : "0",
 			deg : "0deg"
 		},
 		h2 : {
-			width : "450px",
-			top : "175px",
-			left : "0px",
+            width : "110%",
+			top : "30%",
+			left : "0",
 			deg : "0deg"
 		},
 		h3 : {
-			width : "450px",
-			top : "325px",
-			left : "0px",
+            width : "110%",
+			top : "66%",
+			left : "0",
 			deg : "0deg"
 		},
 
 		v1 : {
-			width : "450px",
-			top : "173px",
-			left : "-150px",
+			width : "110%",
+			top : "35%",
+			left : "-38.5%",
 			deg : "90deg"
 		},
 		v2 : {
-			width : "450px",
-			top : "173px",
-			left : "0px",
+			width : "110%",
+			top : "35%",
+			left : "-5%",
 			deg : "90deg"
 		},
 		v3 : {
-			width : "450px",
-			top : "173px",
-			left : "150px",
+			width : "110%",
+			top : "35%",
+			left : "28%",
 			deg : "90deg"
 		},
 
 		sL : {
-			width : "600px",
-			top : "160px",
-			left : "-65px",
+			width : "140%",
+			top : "40%",
+			left : "-15%",
 			deg : "45deg"
 		},
 		sR : {
-			width : "600px",
-			top : "165px",
-			left : "-85px",
+			width : "140%",
+			top : "25%",
+			left : "-15%",
 			deg : "-45deg"
 		}
 	},
 
-	3 : {
+	"Squirtle" : {
 		h1 : {
 			width : "450px",
 			top : "25px",

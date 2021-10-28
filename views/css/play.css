@@ -169,15 +169,16 @@ label {
 
 .arena-div__battle-div [class^="sec_row"] {
   position: absolute;
-  top: 35%;
-  left: -30%;
-  -webkit-transform: rotate(312deg);
-          transform: rotate(312deg);
+  top: 25%;
+  left: -15%;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
   width: 140%;
   height: 33.3%;
-  background-image: url("./imgs/arena/thunder.png");
+  background-image: url("./imgs/arena/kameRed.png");
   background-position: center;
   background-size: 100% 100%;
+  border: 1px solid blue;
 }
 
 .arena-div__battle-div [class^="boxes"] {
