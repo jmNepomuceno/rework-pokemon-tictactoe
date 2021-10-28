@@ -169,14 +169,13 @@ label {
 
 .arena-div__battle-div [class^="sec_row"] {
   position: absolute;
-  top: 29%;
-  left: 33.5%;
-  -webkit-transform: rotate(90deg);
-          transform: rotate(90deg);
-  width: 100%;
+  top: 35%;
+  left: -30%;
+  -webkit-transform: rotate(312deg);
+          transform: rotate(312deg);
+  width: 140%;
   height: 33.3%;
-  border: 1px solid blue;
-  background-image: url("./imgs/arena/kameO.png");
+  background-image: url("./imgs/arena/thunder.png");
   background-position: center;
   background-size: 100% 100%;
 }

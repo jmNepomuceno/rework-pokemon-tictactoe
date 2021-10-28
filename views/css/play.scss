@@ -141,33 +141,14 @@ label{
         // 3 4 5
         // 6 7 8
 
-        // 0 , 1 , 2
-        // top: 0 // left: 0 // transform: rotate(0deg) 
-
-        // 3, 4 ,5
-        // top: 0 // left: 0 // transform: rotate(0deg) 
-
-        // 6 7 8
-        // top: 0 // left: 0 // transform: rotate(0deg)
-
-        // 0 3 6
-        // top: 29% // left: -33.5% // transform: rotate(90deg)
-
-        // 1 4 7
-        // top: 29% // left: 0 // transform: rotate(90deg)
-
-        // 2 5 8
-        // top: 29% // left: 33.5% // transform: rotate(90deg)
-
         [class ^="sec_row"]{
             position:absolute;
-            top:29%;
-            left:33.5%;
-            transform: rotate(90deg);
-            width: 100%; 
+            top:35%;
+            left:-30%;
+            transform: rotate(312deg);
+            width: 140%; 
             height: 33.3%;
-            border:1px solid blue;
-            background-image: url('./imgs/arena/kameO.png');
+            background-image: url('./imgs/arena/thunder.png');
             background-position: center;
             background-size: 100% 100%;
         }
