@@ -152,9 +152,10 @@ label {
   width: 50%;
   height: 100%;
   border: 1px solid white;
+  position: relative;
 }
 
-.arena-div__battle-div [class^="row-"] {
+.arena-div__battle-div [class^="rows"] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -164,6 +165,20 @@ label {
           flex-direction: row;
   width: 100%;
   height: 33.33333%;
+}
+
+.arena-div__battle-div [class^="sec_row"] {
+  position: absolute;
+  top: 29%;
+  left: 33.5%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  width: 100%;
+  height: 33.3%;
+  border: 1px solid blue;
+  background-image: url("./imgs/arena/kameO.png");
+  background-position: center;
+  background-size: 100% 100%;
 }
 
 .arena-div__battle-div [class^="boxes"] {
