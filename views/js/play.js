@@ -17,32 +17,38 @@ let to_fix_width = 100
 const skillsX = {
 	"Pikachu" : {
 		h1 : {
+			width: "100%",
 			top : "0",
 			left : "-5%",
 			deg : "0deg"
 		},
 		h2 : {
+			width: "100%",
 			top : "31%",
 			left : "-5px",
 			deg : "0deg"
 		},
 		h3 : {
+			width: "100%",
 			top : "65%",
 			left : "-5px",
 			deg : "0deg"
 		},
 
 		v1 : {
+			width: "100%",
 			top : "30%",
 			left : "-31%",
 			deg : "90deg"
 		},
 		v2 : {
+			width: "100%",
 			top : "30%",
 			left : "0",
 			deg : "90deg"
 		},
 		v3 : {
+			width: "100%",
 			top : "30%",
 			left : "35%",
 			deg : "90deg"
@@ -64,32 +70,38 @@ const skillsX = {
 
 	"Bulbasaur" : {
 		h1 : {
+			width: "100%",
 			top : "0",
 			left : "0",
 			deg : "0deg"
 		},
 		h2 : {
+			width: "100%",
 			top : "35%",
 			left : "0",
 			deg : "0deg"
 		},
 		h3 : {
+			width: "100%",
 			top : "70%",
 			left : "0",
 			deg : "0deg"
 		},
 
 		v1 : {
+			width: "100%",
 			top : "30%",
 			left : "-33.5%",
 			deg : "90deg"
 		},
 		v2 : {
+			width: "100%",
 			top : "30%",
 			left : "0",
 			deg : "90deg"
 		},
 		v3 : {
+			width: "100%",
 			top : "30%",
 			left : "33.5%",
 			deg : "90deg"
@@ -164,32 +176,38 @@ const skillsX = {
 
 	"Squirtle" : {
 		h1 : {
+			width: "100%",
 			top : "0",
 			left : "0",
 			deg : "0deg"
 		},
 		h2 : {
+			width: "100%",
 			top : "33.3%",
 			left : "0",
 			deg : "0deg"
 		},
 		h3 : {
+			width: "100%",
 			top : "66.6%",
 			left : "0",
 			deg : "0deg"
 		},
 
 		v1 : {
+			width: "100%",
 			top : "30%",
 			left : "-33.3%",
 			deg : "90deg"
 		},
 		v2 : {
+			width: "100%",
 			top : "30%",
 			left : "0px",
 			deg : "90deg"
 		},
 		v3 : {
+			width: "100%",
 			top : "30%",
 			left : "33.3%",
 			deg : "90deg"
@@ -256,7 +274,7 @@ const skillsX = {
 		}
 	},
 
-	5 : {
+	"Piplup" : {
 		h1 : {
 			width : "130%",
 			top : "0",
@@ -274,6 +292,320 @@ const skillsX = {
 			top : "65%",
 			left : "0",
 			deg : "-17deg"
+		},
+
+		v1 : {
+			width : "130%",
+			top : "50%",
+			left : "-50%",
+			deg : "77deg"
+		},
+		v2 : {
+			width : "130%",
+			top : "50%",
+			left : "-15%",
+			deg : "77deg"
+		},
+		v3 : {
+			width : "130%",
+			top : "50%",
+			left : "18%",
+			deg : "77deg"
+		},
+
+		sL : {
+			width : "170%",
+			top : "50%",
+			left : "-30%",
+			deg : "40deg"
+		},
+		sR : {
+			width : "170%",
+			top : "25%",
+			left : "-30%",
+			deg : "-55deg"
+		}
+	}
+}
+
+const skillsO = {	
+	"Pikachu" : {
+		h1 : {
+			width: "100%",
+			top : "0",
+			right : "-2%",
+			deg : "0deg"
+		},
+		h2 : {
+			width: "100%",
+			top : "32%",
+			right : "-2%",
+			deg : "0deg"
+		},
+		h3 : {
+			width: "100%",
+			top : "66%",
+			right : "-2%",
+			deg : "0deg"
+		},
+
+		v1 : {
+			width: "100%",
+			top : "35%",
+			left : "-31%",
+			deg : "90deg"
+		},
+		v2 : {
+			width: "100%",
+			top : "35%",
+			left : "2",
+			deg : "90deg"
+		},
+		v3 : {
+			width: "100%",
+			top : "35%",
+			left : "35%",
+			deg : "90deg"
+		},
+
+		sL : {
+			width : "130%",
+			top : "35%",
+			left : "-10%",
+			deg : "42deg"
+		},
+		sR : {
+			width : "140%",
+			top : "28%",
+			left : "-20%",
+			deg : "320deg"
+		}
+	},
+
+	"Bulbasaur" : {
+		h1 : {
+			top : "0",
+			left : "0",
+			deg : "0deg"
+		},
+		h2 : {
+			top : "35%",
+			left : "0",
+			deg : "0deg"
+		},
+		h3 : {
+			top : "70%",
+			left : "0",
+			deg : "0deg"
+		},
+
+		v1 : {
+			top : "30%",
+			left : "-33.5%",
+			deg : "90deg"
+		},
+		v2 : {
+			top : "30%",
+			left : "0",
+			deg : "90deg"
+		},
+		v3 : {
+			top : "30%",
+			left : "33.5%",
+			deg : "90deg"
+		},
+
+		sL : {
+			width : "120%",
+			top : "30%",
+			left : "-10%",
+			deg : "45deg"
+		},
+		sR : {
+			width : "120%",
+			top : "30%",
+			left : "-10%",
+			deg : "-45deg"
+		}
+	},
+
+	"Charmander" : {
+		h1 : {
+            width : "110%",
+			top : "0",
+			right : "0",
+			deg : "0deg"
+		},
+		h2 : {
+            width : "110%",
+			top : "30%",
+			right : "0",
+			deg : "0deg"
+		},
+		h3 : {
+            width : "110%",
+			top : "66%",
+			right : "0",
+			deg : "0deg"
+		},
+
+		v1 : {
+			width : "110%",
+			top : "35%",
+			left : "-38.5%",
+			deg : "90deg"
+		},
+		v2 : {
+			width : "110%",
+			top : "35%",
+			left : "-5%",
+			deg : "90deg"
+		},
+		v3 : {
+			width : "110%",
+			top : "35%",
+			left : "28%",
+			deg : "90deg"
+		},
+
+		sL : {
+			width : "140%",
+			top : "25%",
+			left : "-26%",
+			deg : "45deg"
+		},
+		sR : {
+			width : "140%",
+			top : "40%",
+			left : "-26%",
+			deg : "-45deg"
+		}
+	},
+
+	"Squirtle" : {
+		h1 : {
+			width: "100%",
+			top : "0",
+			right : "0",
+			deg : "0deg"
+		},
+		h2 : {
+			width: "100%",
+			top : "33.3%",
+			right : "0",
+			deg : "0deg"
+		},
+		h3 : {
+			width: "100%",
+			top : "66.6%",
+			right : "0",
+			deg : "0deg"
+		},
+
+		v1 : {
+			width: "100%",
+			top : "30%",
+			right : "33.3%",
+			deg : "90deg"
+		},
+		v2 : {
+			width: "100%",
+			top : "30%",
+			right : "0px",
+			deg : "90deg"
+		},
+		v3 : {
+			width: "100%",
+			top : "30%",
+			right : "-33.3%",
+			deg : "90deg"
+		},
+
+		sL : {
+			width : "125%",
+			top : "32%",
+			right : "-15%",
+			deg : "45deg"
+		},
+		sR : {
+			width : "125%",
+			top : "32%",
+			right : "-15%",
+			deg : "-45deg"
+		}
+	},
+
+	"Chimchar" : {
+		h1 : {
+			width : "100%",
+			top : "0",
+			left : "0",
+			deg : "0deg"
+		},
+		h2 : {
+			width : "100%",
+			top : "33.3%",
+			left : "0",
+			deg : "0deg"
+		},
+		h3 : {
+			width : "100%",
+			top : "66.6%",
+			left : "0",
+			deg : "0deg"
+		},
+
+		v1 : {
+			width : "100%",
+			top : "30%",
+			left : "-33.3%",
+			deg : "90deg"
+		},
+		v2 : {
+			width : "100%",
+			top : "30%",
+			left : "0",
+			deg : "90deg"
+		},
+		v3 : {
+			width : "100%",
+			top : "30%",
+			left : "33.3%",
+			deg : "90deg"
+		},
+
+		sL : {
+			width : "120%",
+			top : "30%",
+			left : "-10%",
+			deg : "45deg"
+		},
+		sR : {
+			width : "120%",
+			top : "30%",
+			left : "-10%",
+			deg : "-45deg"
+		}
+	},
+
+	"Piplup" : {
+		h1 : {
+			width : "130%",
+			top : "0",
+			left : "0",
+			deg : "-197deg"
+		},
+		h2 : {
+			width : "130%",
+			top : "30%",
+			left : "0",
+			deg : "-197deg"
+		},
+		h3 : {
+			width : "130%",
+			top : "65%",
+			left : "0",
+			deg : "-197deg"
 		},
 
 		v1 : {

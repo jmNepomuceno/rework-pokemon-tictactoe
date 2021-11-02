@@ -169,11 +169,11 @@ label {
 
 .arena-div__battle-div [class^="sec_row"] {
   position: absolute;
-  top: 25%;
-  left: -30%;
-  -webkit-transform: rotate(-55deg);
-          transform: rotate(-55deg);
-  width: 170%;
+  top: 50%;
+  left: -50%;
+  -webkit-transform: rotate(77deg);
+          transform: rotate(77deg);
+  width: 130%;
   height: 33.3%;
   background-image: url("./imgs/arena/water.gif");
   background-position: center;
