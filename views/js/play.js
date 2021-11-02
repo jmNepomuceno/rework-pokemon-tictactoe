@@ -5,7 +5,8 @@ const player_mini_icon = document.querySelectorAll('.mini-icon')
 const p1_health_bar = document.querySelector('.arena-div__p1-div__health .bar-div .health-div')
 const p2_health_bar = document.querySelector('.arena-div__p2-div__health .bar-div .health-div')
 
-const arena_div = document.querySelector('arena-div__battle-div')
+const arena_div = document.querySelector('.arena-div__battle-div')
+const arena_div_row_1 = document.querySelector('.arena-div__battle-div .row-1')
 const boxes_div = document.querySelectorAll('.boxes')
 const rows = document.querySelectorAll('.rows')
 let x_o = false
@@ -13,6 +14,7 @@ let x_o = false
 let p1_health_bar_width = p1_health_bar.offsetWidth
 let p2_health_bar_width = p2_health_bar.offsetWidth
 let to_fix_width = 100 
+
 
 const skillsX = {
 	"Pikachu" : {
@@ -672,12 +674,15 @@ const enable_box = () => {
 }
 
 const create_element = (where) => {
+
     if(where){
         let secondary_row = document.createElement('div') 
         secondary_row.className = "sec_row"
-        arena_div.appendChild(secondary_row)
-    }else{
-        arena_div.removeChild(document.querySelector('.sec_row'))
+        arena_div_row_1.appendChild(secondary_row)
+		//console.log(arena_div_row_1)
+    }
+	else{
+        arena_div_row_1.removeChild(document.querySelector('.sec_row'))
     }
 }
 
@@ -772,7 +777,7 @@ const health_bar = (player) => {
         var width = player_health_bar_width
 
         let limit = (to_fix_width == 100) ? width - ((width - 100) + 25) : width - 25
-
+		// console.log(limit)
         var id = setInterval(frame, 50);
 
         function frame() {
@@ -789,10 +794,11 @@ const health_bar = (player) => {
                 }
                 to_fix_width = 0
                 enable_box();
-                create_element(false)
+                create_element(0, false)
             } else {
                 width--;  
                 elem.style.width = width + "%";
+				console.log(width)
             }
         }
     }
