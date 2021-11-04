@@ -748,11 +748,8 @@ const create_element = (where) => {
 }
 
 const secondary_row_coordinates = (index, where) => {
-	//console.log("index: " + index)
-	//console.log(icon_lbl[index].textContent)
 
 	let ltr = (index == "0") ? "X" : "O"
-	//console.log("ltr: " + ltr)
 
 	if(ltr == "X"){
 		secondary_row.style.width = skillsX[icon_lbl[index].textContent][where]["width"]
