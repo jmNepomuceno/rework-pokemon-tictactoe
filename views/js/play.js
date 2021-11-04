@@ -20,32 +20,61 @@ let to_fix_width = 100
 
 let secondary_row
 
-const skill_url = {
-	"Pikachu" : { 
-		"X" : './imgs/arena/thunder.png',
-		"O" : './imgs/arena/thunderO.png'
-	},
-	"Bulbasaur" : { 
-		"X" : './imgs/arena/razorleaf.png',
-		"O" : './imgs/arena/razorleaf.png'
-	},
-	"Charmander" : { 
-		"X" : './imgs/arena/kameRed.png',
-		"O" : './imgs/arena/kameRedO.png'
-	},
-	"Squirtle" : { 
-		"X" : './imgs/arena/kameO.png',
-		"O" : './imgs/arena/kame.png'
-	},
-	"Chimchar" : { 
-		"X" : './imgs/arena/flames.png',
-		"O" : './imgs/arena/flames.png'
-	},
-	"Piplup" : { 
-		"X" : './imgs/arena/water.gif',
-		"O" : './imgs/arena/water.gif'
-	},
-}
+// const skill_url = {
+// 	"Pikachu" : { 
+// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\thunder.png',
+// 		"O" : '.D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\thunderO.png'
+// 	},
+// 	"Bulbasaur" : { 
+// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\razorleaf.png',
+// 		"O" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\razorleaf.png'
+// 	},
+// 	"Charmander" : { 
+// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\kameRed.png',
+// 		"O" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\kameRedO.png'
+// 	},
+// 	"Squirtle" : { 
+// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\kameO.png',
+// 		"O" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\kame.png'
+// 	},
+// 	"Chimchar" : { 
+// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\flames.png',
+// 		"O" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\flames.png'
+// 	},
+// 	"Piplup" : { 
+// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\water.gif',
+// 		"O" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\waterO.gif'
+// 	},
+// }
+
+// const skill_url = {
+// 	"Pikachu" : { 
+// 		"X" : './imgs/arena/thunder.png',
+// 		"O" : './imgs/arena/thunderO.png'
+// 	},
+// 	"Bulbasaur" : { 
+// 		"X" : './imgs/arena/razorleaf.png',
+// 		"O" : './imgs/arena/razorleaf.png'
+// 	},
+// 	"Charmander" : { 
+// 		"X" : './imgs/arena/kameRed.png',
+// 		"O" : './imgs/arena/kameRedO.png'
+// 	},
+// 	"Squirtle" : { 
+// 		"X" : './imgs/arena/kameO.png',
+// 		"O" : './imgs/arena/kame.png'
+// 	},
+// 	"Chimchar" : { 
+// 		"X" : './imgs/arena/flames.png',
+// 		"O" : './imgs/arena/flames.png'
+// 	},
+// 	"Piplup" : { 
+// 		"X" : './imgs/arena/water.gif',
+// 		"O" : './imgs/arena/waterO.gif'
+// 	}
+// }
+
+
 
 const skillsX = {
 	"Pikachu" : {
@@ -718,26 +747,31 @@ const create_element = (where) => {
 }
 
 const secondary_row_coordinates = (index, where) => {
-	console.log(index)
-	console.log(icon_lbl[index])
+	//console.log(index)
+	console.log(icon_lbl[index].textContent)
 
-	let ltr = (index == "X") ? "X" : "O"
+	let ltr = (index == "0") ? "X" : "O"
+	console.log(ltr)
 
 	if(index == "X"){
 		secondary_row.style.width = skillsX[icon_lbl[index].textContent][where]["width"]
 		secondary_row.style.top = skillsX[icon_lbl[index].textContent][where]["top"]
 		secondary_row.style.left = skillsX[icon_lbl[index].textContent][where]["left"]
 		secondary_row.style.transform = "rotate(" + skillsX[icon_lbl[index].textContent][where]["deg"] +")"
-		console.log(skill_url[icon_lbl[index].textContent][ltr])
+		secondary_row.style.backgroundImage = "url(" + skill_url[icon_lbl[index].textContent][ltr] + ")"
+		//console.log(secondary_row.style.backgroundImage)
 
-		//secondary_row.style.backgroundImage = "url(" + skill_url[icon_lbl[index].textContent][ltr] + ")"
 	}
 	else{
 		secondary_row.style.width = skillsO[icon_lbl[index].textContent][where]["width"]
 		secondary_row.style.top = skillsO[icon_lbl[index].textContent][where]["top"]
 		secondary_row.style.left = skillsO[icon_lbl[index].textContent][where]["left"]
 		secondary_row.style.transform = "rotate(" + skillsO[icon_lbl[index].textContent][where]["deg"] +")"
+		
 		secondary_row.style.backgroundImage = "url(" + skill_url[icon_lbl[index].textContent][ltr] + ")"
+		//console.log(secondary_row.style.backgroundImage)
+
+		console.log(skill_url["Bulbasaur"]["O"])
 	}
 	
 }
