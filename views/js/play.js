@@ -47,32 +47,33 @@ let secondary_row
 // 	},
 // }
 
-// const skill_url = {
-// 	"Pikachu" : { 
-// 		"X" : './imgs/arena/thunder.png',
-// 		"O" : './imgs/arena/thunderO.png'
-// 	},
-// 	"Bulbasaur" : { 
-// 		"X" : './imgs/arena/razorleaf.png',
-// 		"O" : './imgs/arena/razorleaf.png'
-// 	},
-// 	"Charmander" : { 
-// 		"X" : './imgs/arena/kameRed.png',
-// 		"O" : './imgs/arena/kameRedO.png'
-// 	},
-// 	"Squirtle" : { 
-// 		"X" : './imgs/arena/kameO.png',
-// 		"O" : './imgs/arena/kame.png'
-// 	},
-// 	"Chimchar" : { 
-// 		"X" : './imgs/arena/flames.png',
-// 		"O" : './imgs/arena/flames.png'
-// 	},
-// 	"Piplup" : { 
-// 		"X" : './imgs/arena/water.gif',
-// 		"O" : './imgs/arena/waterO.gif'
-// 	}
-// }
+
+const skill_url = {
+	"Pikachu" : { 
+		"X" : 'thunder.png',
+		"O" : 'thunderO.png'
+	},
+	"Bulbasaur" : { 
+		"X" : 'razorleaf.png',
+		"O" : 'razorleaf.png'
+	},
+	"Charmander" : { 
+		"X" : 'kameRed.png',
+		"O" : 'kameRedO.png'
+	},
+	"Squirtle" : { 
+		"X" : 'kameO.png',
+		"O" : 'kame.png'
+	},
+	"Chimchar" : { 
+		"X" : 'flames.png',
+		"O" : 'flames.png'
+	},
+	"Piplup" : { 
+		"X" : 'water.gif',
+		"O" : 'waterO.gif'
+	}
+}
 
 
 
@@ -747,40 +748,34 @@ const create_element = (where) => {
 }
 
 const secondary_row_coordinates = (index, where) => {
-	//console.log(index)
-	console.log(icon_lbl[index].textContent)
+	//console.log("index: " + index)
+	//console.log(icon_lbl[index].textContent)
 
 	let ltr = (index == "0") ? "X" : "O"
-	console.log(ltr)
+	//console.log("ltr: " + ltr)
 
-	if(index == "X"){
+	if(ltr == "X"){
 		secondary_row.style.width = skillsX[icon_lbl[index].textContent][where]["width"]
 		secondary_row.style.top = skillsX[icon_lbl[index].textContent][where]["top"]
 		secondary_row.style.left = skillsX[icon_lbl[index].textContent][where]["left"]
 		secondary_row.style.transform = "rotate(" + skillsX[icon_lbl[index].textContent][where]["deg"] +")"
-		secondary_row.style.backgroundImage = "url(" + skill_url[icon_lbl[index].textContent][ltr] + ")"
-		//console.log(secondary_row.style.backgroundImage)
-
+		secondary_row.style.backgroundImage = "url('css/imgs/arena/" + skill_url[icon_lbl[index].textContent][ltr] + "')"
 	}
 	else{
 		secondary_row.style.width = skillsO[icon_lbl[index].textContent][where]["width"]
 		secondary_row.style.top = skillsO[icon_lbl[index].textContent][where]["top"]
 		secondary_row.style.left = skillsO[icon_lbl[index].textContent][where]["left"]
 		secondary_row.style.transform = "rotate(" + skillsO[icon_lbl[index].textContent][where]["deg"] +")"
-		
-		secondary_row.style.backgroundImage = "url(" + skill_url[icon_lbl[index].textContent][ltr] + ")"
-		//console.log(secondary_row.style.backgroundImage)
-
-		console.log(skill_url["Bulbasaur"]["O"])
+		secondary_row.style.backgroundImage = "url('css/imgs/arena/" + skill_url[icon_lbl[index].textContent][ltr] + "')"
 	}
-	
 }
 
 const check_pattern = (ltr) => {
 
     if(boxes_div[0].textContent == ltr && boxes_div[1].textContent == ltr && boxes_div[2].textContent == ltr){
         let index = (ltr == "X") ? 0 : 1
-		console.log(index)
+		console.log("index: " + index)
+	
 		create_element(true);
 
 		secondary_row_coordinates(index, "h1")
