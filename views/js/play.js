@@ -794,7 +794,7 @@ const health_bar = (player) => {
                 }
                 to_fix_width = 0
                 enable_box();
-                create_element(0, false)
+                create_element(false)
             } else {
                 width--;  
                 elem.style.width = width + "%";
