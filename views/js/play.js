@@ -20,6 +20,33 @@ let to_fix_width = 100
 
 let secondary_row
 
+const skill_url = {
+	"Pikachu" : { 
+		"X" : './imgs/arena/thunder.png',
+		"O" : './imgs/arena/thunderO.png'
+	},
+	"Bulbasaur" : { 
+		"X" : './imgs/arena/razorleaf.png',
+		"O" : './imgs/arena/razorleaf.png'
+	},
+	"Charmander" : { 
+		"X" : './imgs/arena/kameRed.png',
+		"O" : './imgs/arena/kameRedO.png'
+	},
+	"Squirtle" : { 
+		"X" : './imgs/arena/kameO.png',
+		"O" : './imgs/arena/kame.png'
+	},
+	"Chimchar" : { 
+		"X" : './imgs/arena/flames.png',
+		"O" : './imgs/arena/flames.png'
+	},
+	"Piplup" : { 
+		"X" : './imgs/arena/water.gif',
+		"O" : './imgs/arena/water.gif'
+	},
+}
+
 const skillsX = {
 	"Pikachu" : {
 		h1 : {
@@ -691,43 +718,64 @@ const create_element = (where) => {
 }
 
 const secondary_row_coordinates = (index, where) => {
-	secondary_row.style.width = skillsX[icon_lbl[index].textContent][where]["width"]
-	secondary_row.style.top = skillsX[icon_lbl[index].textContent][where]["top"]
-	secondary_row.style.left = skillsX[icon_lbl[index].textContent][where]["left"]
-	secondary_row.style.deg = skillsX[icon_lbl[index].textContent][where]["deg"]
+	console.log(index)
+	console.log(icon_lbl[index])
+
+	let ltr = (index == "X") ? "X" : "O"
+
+	if(index == "X"){
+		secondary_row.style.width = skillsX[icon_lbl[index].textContent][where]["width"]
+		secondary_row.style.top = skillsX[icon_lbl[index].textContent][where]["top"]
+		secondary_row.style.left = skillsX[icon_lbl[index].textContent][where]["left"]
+		secondary_row.style.transform = "rotate(" + skillsX[icon_lbl[index].textContent][where]["deg"] +")"
+		console.log(skill_url[icon_lbl[index].textContent][ltr])
+
+		//secondary_row.style.backgroundImage = "url(" + skill_url[icon_lbl[index].textContent][ltr] + ")"
+	}
+	else{
+		secondary_row.style.width = skillsO[icon_lbl[index].textContent][where]["width"]
+		secondary_row.style.top = skillsO[icon_lbl[index].textContent][where]["top"]
+		secondary_row.style.left = skillsO[icon_lbl[index].textContent][where]["left"]
+		secondary_row.style.transform = "rotate(" + skillsO[icon_lbl[index].textContent][where]["deg"] +")"
+		secondary_row.style.backgroundImage = "url(" + skill_url[icon_lbl[index].textContent][ltr] + ")"
+	}
+	
 }
 
 const check_pattern = (ltr) => {
 
     if(boxes_div[0].textContent == ltr && boxes_div[1].textContent == ltr && boxes_div[2].textContent == ltr){
-        create_element(true);
-			
-		if(ltr == "X"){
-			secondary_row_coordinates(0, "h1")
-		}
+        let index = (ltr == "X") ? 0 : 1
+		console.log(index)
+		create_element(true);
+
+		secondary_row_coordinates(index, "h1")
+
 
         health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[3].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[5].textContent == ltr){
-        create_element(true);
+        let index = (ltr == "X") ? 0 : 1
+		create_element(true);
 
 		if(ltr == "X"){
-			secondary_row_coordinates(1, "h2")
+			secondary_row_coordinates(index, "h2")
 		}
 
         health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[6].textContent == ltr && boxes_div[7].textContent == ltr && boxes_div[8].textContent == ltr){
-        create_element(true);
+        let index = (ltr == "X") ? 0 : 1
+		create_element(true);
 
 		// 0 1 2
 		// 3 4 5
 		// 6 7 8
 
 		if(ltr == "X"){
-			secondary_row_coordinates(2, "h3")
+			secondary_row_coordinates(index, "h3")
 		}
 
         health_bar(ltr);
@@ -735,42 +783,47 @@ const check_pattern = (ltr) => {
     }
 
     else if(boxes_div[0].textContent == ltr && boxes_div[3].textContent == ltr && boxes_div[6].textContent == ltr){
-        create_element(true);
+        let index = (ltr == "X") ? 0 : 1
+		create_element(true);
 
-		secondary_row_coordinates(0, "v1")
+		secondary_row_coordinates(index, "v1")
 
         health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[1].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[7].textContent == ltr){
-        create_element(true);
+        let index = (ltr == "X") ? 0 : 1
+		create_element(true);
 
-		secondary_row_coordinates(0, "v2")
+		secondary_row_coordinates(index, "v2")
 
         health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[2].textContent == ltr && boxes_div[5].textContent == ltr && boxes_div[8].textContent == ltr){
-        create_element(true);
+        let index = (ltr == "X") ? 0 : 1
+		create_element(true);
 
-		secondary_row_coordinates(0, "v3")
+		secondary_row_coordinates(index, "v3")
 
         health_bar(ltr);
         disable_box();
     }
 
     else if(boxes_div[0].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[8].textContent == ltr){
-        create_element(true);
+        let index = (ltr == "X") ? 0 : 1
+		create_element(true);
 
-		secondary_row_coordinates(0, "sL")
+		secondary_row_coordinates(index, "sL")
 
         health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[2].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[6].textContent == ltr){
-        create_element(true);
+        let index = (ltr == "X") ? 0 : 1
+		create_element(true);
 
-		secondary_row_coordinates(0, "sR")
+		secondary_row_coordinates(index, "sR")
 
         health_bar(ltr);
         disable_box();
@@ -839,6 +892,7 @@ const health_bar = (player) => {
                 to_fix_width = 0
                 enable_box();
                 create_element(false)
+				x_o = false
             } else {
                 width--;  
                 elem.style.width = width + "%";

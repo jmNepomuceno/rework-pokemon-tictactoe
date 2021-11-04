@@ -178,7 +178,6 @@ label {
   background-image: url("./imgs/arena/thunder.png");
   background-position: center;
   background-size: 100% 100%;
-  border: 1px solid blue;
 }
 
 .arena-div__battle-div [class^="boxes"] {
