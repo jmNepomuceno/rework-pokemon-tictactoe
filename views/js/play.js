@@ -780,7 +780,6 @@ const check_pattern = (ltr) => {
 
 		secondary_row_coordinates(index, "h1")
 
-
         health_bar(ltr);
         disable_box();
     }
@@ -788,9 +787,7 @@ const check_pattern = (ltr) => {
         let index = (ltr == "X") ? 0 : 1
 		create_element(true);
 
-		if(ltr == "X"){
-			secondary_row_coordinates(index, "h2")
-		}
+		secondary_row_coordinates(index, "h2")
 
         health_bar(ltr);
         disable_box();
@@ -799,13 +796,7 @@ const check_pattern = (ltr) => {
         let index = (ltr == "X") ? 0 : 1
 		create_element(true);
 
-		// 0 1 2
-		// 3 4 5
-		// 6 7 8
-
-		if(ltr == "X"){
-			secondary_row_coordinates(index, "h3")
-		}
+		secondary_row_coordinates(index, "h3")
 
         health_bar(ltr);
         disable_box();
@@ -903,7 +894,7 @@ const health_bar = (player) => {
         var width = player_health_bar_width
 
         let limit = (to_fix_width == 100) ? width - ((width - 100) + 25) : width - 25
-		// console.log(limit)
+
         var id = setInterval(frame, 50);
 
         function frame() {
@@ -925,10 +916,8 @@ const health_bar = (player) => {
             } else {
                 width--;  
                 elem.style.width = width + "%";
-				//console.log(width)
             }
         }
     }
 
-    
 }
