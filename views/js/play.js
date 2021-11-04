@@ -9,12 +9,16 @@ const arena_div = document.querySelector('.arena-div__battle-div')
 const arena_div_row_1 = document.querySelector('.arena-div__battle-div .row-1')
 const boxes_div = document.querySelectorAll('.boxes')
 const rows = document.querySelectorAll('.rows')
+
+const icon_lbl = document.querySelectorAll('label')
+
 let x_o = false
 
 let p1_health_bar_width = p1_health_bar.offsetWidth
 let p2_health_bar_width = p2_health_bar.offsetWidth
 let to_fix_width = 100 
 
+let secondary_row
 
 const skillsX = {
 	"Pikachu" : {
@@ -676,7 +680,7 @@ const enable_box = () => {
 const create_element = (where) => {
 
     if(where){
-        let secondary_row = document.createElement('div') 
+        secondary_row = document.createElement('div') 
         secondary_row.className = "sec_row"
         arena_div_row_1.appendChild(secondary_row)
 		//console.log(arena_div_row_1)
@@ -686,20 +690,46 @@ const create_element = (where) => {
     }
 }
 
+const secondary_row_coordinates = (index, where) => {
+	secondary_row.style.width = skillsX[icon_lbl[index].textContent][where]["width"]
+	secondary_row.style.top = skillsX[icon_lbl[index].textContent][where]["top"]
+	secondary_row.style.left = skillsX[icon_lbl[index].textContent][where]["left"]
+	secondary_row.style.deg = skillsX[icon_lbl[index].textContent][where]["deg"]
+}
+
 const check_pattern = (ltr) => {
 
     if(boxes_div[0].textContent == ltr && boxes_div[1].textContent == ltr && boxes_div[2].textContent == ltr){
         create_element(true);
+			
+		if(ltr == "X"){
+			secondary_row_coordinates(0, "h1")
+		}
+
         health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[3].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[5].textContent == ltr){
         create_element(true);
+
+		if(ltr == "X"){
+			secondary_row_coordinates(1, "h2")
+		}
+
         health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[6].textContent == ltr && boxes_div[7].textContent == ltr && boxes_div[8].textContent == ltr){
         create_element(true);
+
+		// 0 1 2
+		// 3 4 5
+		// 6 7 8
+
+		if(ltr == "X"){
+			secondary_row_coordinates(2, "h3")
+		}
+
         health_bar(ltr);
         disable_box();
     }
@@ -707,27 +737,41 @@ const check_pattern = (ltr) => {
     else if(boxes_div[0].textContent == ltr && boxes_div[3].textContent == ltr && boxes_div[6].textContent == ltr){
         create_element(true);
 
+		secondary_row_coordinates(0, "v1")
+
         health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[1].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[7].textContent == ltr){
         create_element(true);
+
+		secondary_row_coordinates(0, "v2")
+
         health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[2].textContent == ltr && boxes_div[5].textContent == ltr && boxes_div[8].textContent == ltr){
         create_element(true);
+
+		secondary_row_coordinates(0, "v3")
+
         health_bar(ltr);
         disable_box();
     }
 
     else if(boxes_div[0].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[8].textContent == ltr){
         create_element(true);
+
+		secondary_row_coordinates(0, "sL")
+
         health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[2].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[6].textContent == ltr){
         create_element(true);
+
+		secondary_row_coordinates(0, "sR")
+
         health_bar(ltr);
         disable_box();
     }
@@ -798,30 +842,10 @@ const health_bar = (player) => {
             } else {
                 width--;  
                 elem.style.width = width + "%";
-				console.log(width)
+				//console.log(width)
             }
         }
     }
 
     
 }
-
-function move() {
-    if (i == 0) {
-        i = 1;
-        var elem = document.getElementById("myBar");
-        var width = 1;
-        var id = setInterval(frame, 10);
-        function frame() {
-          if (width >= 100) {
-            clearInterval(id);
-            i = 0;
-          } else {
-            width++;
-            elem.style.width = width + "%";
-          }
-        }
-      }
-}
-
-
