@@ -912,19 +912,19 @@ const health_bar = (player) => {
     let i = 0
     let player_health_bar = (player == "X") ? p2_health_bar : p1_health_bar
 
-    let player_health_bar_width = (player == "X") ? p1_health_bar_width : p2_health_bar_width
+    let player_health_bar_width = (player == "X") ? p2_health_bar_width : p1_health_bar_width
 
     if (i == 0) {
 		
         i = 1;
         var elem = player_health_bar;
-		console.log(elem)
+		//console.log(elem)
 
         var width = player_health_bar_width
-		console.log(width)
+		//console.log(width)
 
 		to_fix_width = (elem.id == "p1-health") ? to_fix_width_p1 : to_fix_width_p2
-		console.log(to_fix_width)
+		//console.log(to_fix_width)
 
 		if(width == 50){
 			elem.style.backgroundColor = "rgb(241, 140, 0)"
@@ -943,9 +943,9 @@ const health_bar = (player) => {
                 clearInterval(id);
                 i = 0;
                 if(player_health_bar_width == p1_health_bar_width){
-                    //console.log(width)
+					//console.log("kyla")
+					//console.log(width)
                     p1_health_bar_width = width
-                    //console.log(p1_health_bar_width)
                 }
                 else if(player_health_bar_width == p2_health_bar_width){
                     p2_health_bar_width = width

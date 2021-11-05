@@ -211,6 +211,24 @@ label {
   background-size: 100% 100%;
 }
 
+.arena-div__battle-div [class^="win-div"] {
+  position: absolute;
+  top: 30%;
+  left: 15%;
+  display: block;
+  width: 70%;
+  height: 40%;
+  background: #c7a648;
+}
+
+.arena-div__battle-div [class^="inner-win-div"] {
+  margin: 2.5% 0 0 2.5%;
+  width: 95%;
+  height: 90%;
+  background: #294d67;
+  border: 5px solid white;
+}
+
 .arena-div__p2-div {
   width: 25%;
   height: 100%;
