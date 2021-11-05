@@ -929,16 +929,17 @@ const health_bar = (player) => {
     let i = 0
     let player_health_bar = (player == "X") ? p2_health_bar : p1_health_bar
 	//console.log(player_health_bar.id)
-    let player_health_bar_width = (player == "X") ? p1_health_bar_width : p2_health_bar_width
-
+	console.log(player)
+    let player_health_bar_width = (player == "X") ? p2_health_bar_width : p1_health_bar_width
+	console.log(player_health_bar_width)
     if (i == 0) {
 		
         i = 1;
         var elem = player_health_bar;
 		//console.log(elem)
 
-        //var width = player_health_bar_width
-		var width = player_health_bar.offsetWidth
+        var width = player_health_bar_width
+		//var width = player_health_bar.offsetWidth
 		//console.log(width)
 
 		to_fix_width = (elem.id == "p1-health") ? to_fix_width_p1 : to_fix_width_p2
@@ -960,12 +961,14 @@ const health_bar = (player) => {
             if (width <= limit) {
                 clearInterval(id);
                 i = 0;
-                if(player_health_bar == p1_health_bar_width){
+                if(player_health_bar == p1_health_bar){
 					console.log("kyla")
-					//console.log(width)
+					console.log(width)
                     p1_health_bar_width = width
                 }
-                else if(player_health_bar_width == p2_health_bar_width){
+                else if(player_health_bar == p2_health_bar){
+					console.log("denzelle")
+					console.log(width)
                     p2_health_bar_width = width
                 }
                 if(elem.id == "p1-health"){
