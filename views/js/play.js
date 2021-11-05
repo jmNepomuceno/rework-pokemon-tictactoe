@@ -12,41 +12,15 @@ const rows = document.querySelectorAll('.rows')
 
 const icon_lbl = document.querySelectorAll('label')
 
+const skill_gif_div = document.querySelector('.skill-gif')
+
 let x_o = false
 
 let p1_health_bar_width = p1_health_bar.offsetWidth
 let p2_health_bar_width = p2_health_bar.offsetWidth
-let to_fix_width = 100 
+let to_fix_width , to_fix_width_p1 = 100 , to_fix_width_p2 = 100
 
 let secondary_row
-
-// const skill_url = {
-// 	"Pikachu" : { 
-// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\thunder.png',
-// 		"O" : '.D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\thunderO.png'
-// 	},
-// 	"Bulbasaur" : { 
-// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\razorleaf.png',
-// 		"O" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\razorleaf.png'
-// 	},
-// 	"Charmander" : { 
-// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\kameRed.png',
-// 		"O" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\kameRedO.png'
-// 	},
-// 	"Squirtle" : { 
-// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\kameO.png',
-// 		"O" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\kame.png'
-// 	},
-// 	"Chimchar" : { 
-// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\flames.png',
-// 		"O" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\flames.png'
-// 	},
-// 	"Piplup" : { 
-// 		"X" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\water.gif',
-// 		"O" : 'D:\GitHub\rework-pokemon-tictactoe\views\css\imgs\arena\waterO.gif'
-// 	},
-// }
-
 
 const skill_url = {
 	"Pikachu" : { 
@@ -75,7 +49,42 @@ const skill_url = {
 	}
 }
 
+const skill_gif = {
+	"Pikachu" : "pikachuSkill.gif",
+	"Bulbasaur" : "bulbasaurSkill.gif",
+	"Charmander" : "charmanderSkill.gif",
+	"Squirtle" : "squirtleSkill.gif",
+	"Chimchar" : "chimcharSkill.gif",
+	"Piplup" : "piplupSkill.gif"
+	
+}
 
+const win_img_url = {
+	"Pikachu" : {
+		"X" : "pikachuWin.jpg",
+		"O" : "pikachuFainted.jpg"
+	},
+	"Bulbasaur" : {
+		"X" : "bulbasaurWin.jpg",
+		"O" : "bulbasaurFainted.png"
+	},
+	"Charmander" : {
+		"X" : "charmanderWin.jpg",
+		"O" : "charmanderFainted.jpg"
+	},
+	"Squirtle" : {
+		"X" : "squirtleWin.jpg",
+		"O" : "squirtleFainted.jpg"
+	},
+	"Chimchar" : {
+		"X" : "chimcharWin.jpg",
+		"O" : "chimcharFainted.gif"
+	},
+	"Piplup" : {
+		"X" : "piplupWin.jpg",
+		"O" : "piplupFainted.jpg"
+	},
+}
 
 const skillsX = {
 	"Pikachu" : {
@@ -741,10 +750,9 @@ const create_element = (where) => {
         secondary_row.className = "sec_row"
         arena_div_row_1.appendChild(secondary_row)
 		//console.log(arena_div_row_1)
-    }
-	else{
-        arena_div_row_1.removeChild(document.querySelector('.sec_row'))
-    }
+    }else{
+		arena_div_row_1.removeChild(document.querySelector('.sec_row'))
+	}
 }
 
 const secondary_row_coordinates = (index, where) => {
@@ -767,17 +775,40 @@ const secondary_row_coordinates = (index, where) => {
 	}
 }
 
+const play_skill_gif = (ltr,index) =>{
+	let i_timer = 3, j_timer = 3
+	//console.log(i_timer)
+	let timer = setInterval(() => {
+		if(i_timer == 0){
+			create_element(false)
+			skill_gif_div.style.display = "block"
+			skill_gif_div.style.backgroundImage = "url('css/imgs/arena/" + skill_gif[icon_lbl[index].textContent] + "')"
+			clearInterval(timer)
+
+			let sec_timer = setInterval(() =>{
+				if(j_timer == 0){
+					health_bar(ltr);
+					clearInterval(sec_timer)
+				}
+				j_timer -= 1
+			},500)
+
+		}
+		i_timer -= 1
+	}, 500)
+	
+}
+
 const check_pattern = (ltr) => {
 
     if(boxes_div[0].textContent == ltr && boxes_div[1].textContent == ltr && boxes_div[2].textContent == ltr){
         let index = (ltr == "X") ? 0 : 1
-		console.log("index: " + index)
 	
 		create_element(true);
 
 		secondary_row_coordinates(index, "h1")
+		play_skill_gif(ltr, index)
 
-        health_bar(ltr);
         disable_box();
     }
     else if(boxes_div[3].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[5].textContent == ltr){
@@ -785,8 +816,8 @@ const check_pattern = (ltr) => {
 		create_element(true);
 
 		secondary_row_coordinates(index, "h2")
-
-        health_bar(ltr);
+		play_skill_gif(ltr, index)
+		
         disable_box();
     }
     else if(boxes_div[6].textContent == ltr && boxes_div[7].textContent == ltr && boxes_div[8].textContent == ltr){
@@ -794,9 +825,9 @@ const check_pattern = (ltr) => {
 		create_element(true);
 
 		secondary_row_coordinates(index, "h3")
-
-        health_bar(ltr);
-        disable_box();
+		play_skill_gif(ltr, index)
+		
+	 	disable_box();
     }
 
     else if(boxes_div[0].textContent == ltr && boxes_div[3].textContent == ltr && boxes_div[6].textContent == ltr){
@@ -805,7 +836,7 @@ const check_pattern = (ltr) => {
 
 		secondary_row_coordinates(index, "v1")
 
-        health_bar(ltr);
+		play_skill_gif(ltr, index)
         disable_box();
     }
     else if(boxes_div[1].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[7].textContent == ltr){
@@ -814,7 +845,7 @@ const check_pattern = (ltr) => {
 
 		secondary_row_coordinates(index, "v2")
 
-        health_bar(ltr);
+        play_skill_gif(ltr, index)
         disable_box();
     }
     else if(boxes_div[2].textContent == ltr && boxes_div[5].textContent == ltr && boxes_div[8].textContent == ltr){
@@ -823,7 +854,7 @@ const check_pattern = (ltr) => {
 
 		secondary_row_coordinates(index, "v3")
 
-        health_bar(ltr);
+        play_skill_gif(ltr, index)
         disable_box();
     }
 
@@ -833,7 +864,7 @@ const check_pattern = (ltr) => {
 
 		secondary_row_coordinates(index, "sL")
 
-        health_bar(ltr);
+        play_skill_gif(ltr, index)
         disable_box();
     }
     else if(boxes_div[2].textContent == ltr && boxes_div[4].textContent == ltr && boxes_div[6].textContent == ltr){
@@ -842,7 +873,7 @@ const check_pattern = (ltr) => {
 
 		secondary_row_coordinates(index, "sR")
 
-        health_bar(ltr);
+        play_skill_gif(ltr, index)
         disable_box();
     }
     else{
@@ -879,16 +910,29 @@ for(let i = 0; i < 2; i++){
 
 const health_bar = (player) => {
     let i = 0
-    let player_health_bar = (player == "X") ? p1_health_bar : p2_health_bar
+    let player_health_bar = (player == "X") ? p2_health_bar : p1_health_bar
 
     let player_health_bar_width = (player == "X") ? p1_health_bar_width : p2_health_bar_width
 
     if (i == 0) {
-
+		
         i = 1;
         var elem = player_health_bar;
+		console.log(elem)
 
         var width = player_health_bar_width
+		console.log(width)
+
+		to_fix_width = (elem.id == "p1-health") ? to_fix_width_p1 : to_fix_width_p2
+		console.log(to_fix_width)
+
+		if(width == 50){
+			elem.style.backgroundColor = "rgb(241, 140, 0)"
+		}
+		if(width == 25){
+			elem.style.backgroundColor = "rgb(206, 0, 0)"
+		}
+
 
         let limit = (to_fix_width == 100) ? width - ((width - 100) + 25) : width - 25
 
@@ -899,17 +943,35 @@ const health_bar = (player) => {
                 clearInterval(id);
                 i = 0;
                 if(player_health_bar_width == p1_health_bar_width){
-                    console.log(width)
+                    //console.log(width)
                     p1_health_bar_width = width
-                    console.log(p1_health_bar_width)
+                    //console.log(p1_health_bar_width)
                 }
                 else if(player_health_bar_width == p2_health_bar_width){
                     p2_health_bar_width = width
                 }
-                to_fix_width = 0
+                if(elem.id == "p1-health"){
+					to_fix_width_p1 = 0
+				}else{
+					to_fix_width_p2 = 0
+				}
                 enable_box();
-                create_element(false)
 				x_o = false
+				skill_gif_div.style.display = "none"
+
+				if(width == 0){
+					disable_box();
+					if(elem.id == "p2-health"){
+						char_icon[0].src = "/css/imgs/arena/" + win_img_url[icon_lbl[0].textContent]["X"]
+						char_icon[1].src = "/css/imgs/arena/" + win_img_url[icon_lbl[1].textContent]["O"]
+
+					}else{
+						char_icon[1].src = "/css/imgs/arena/" + win_img_url[icon_lbl[1].textContent]["X"]
+						char_icon[0].src = "/css/imgs/arena/" + win_img_url[icon_lbl[0].textContent]["O"]
+
+					}
+				}
+
             } else {
                 width--;  
                 elem.style.width = width + "%";
