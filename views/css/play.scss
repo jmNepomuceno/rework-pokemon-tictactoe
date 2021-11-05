@@ -179,22 +179,11 @@ label{
             position: absolute;
             top:30%;
             left:15%;
-            display: block;
+            display: none;
             width:70%;
             height:40%;
             background: #c7a648;
         }
-
-        [class ^="inner-win-div"]{
-            margin:2.5% 0 0 2.5%;
-            width: 95%;
-            height:90%;
-            background: #294d67;
-            border: 5px solid white;
-        }
-
-        
-        
     }
 
     &__p2-div{
@@ -266,6 +255,30 @@ label{
                 }
             }
         }
+    }
+}
+
+.inner-win-div{
+    margin:2.5% 0 0 2.5%;
+    width: 95%;
+    height:90%;
+    background: #294d67;
+    border: 5px solid white;
+    letter-spacing:2px;
+    font-size: 2rem;
+    position: relative;
+    text-align: center;
+
+    &__outro-text{
+        margin-top:5%;
+        color:#f4f0f4;
+    }
+
+    &__arrow-img{
+        position: absolute;
+        top:45%;
+        right:5%;
+        width:15%;
     }
 }
 

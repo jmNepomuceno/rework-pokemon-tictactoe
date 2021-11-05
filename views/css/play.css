@@ -215,18 +215,10 @@ label {
   position: absolute;
   top: 30%;
   left: 15%;
-  display: block;
+  display: none;
   width: 70%;
   height: 40%;
   background: #c7a648;
-}
-
-.arena-div__battle-div [class^="inner-win-div"] {
-  margin: 2.5% 0 0 2.5%;
-  width: 95%;
-  height: 90%;
-  background: #294d67;
-  border: 5px solid white;
 }
 
 .arena-div__p2-div {
@@ -313,6 +305,30 @@ label {
   height: 100%;
   background-color: #56ca7c;
   border-radius: 7px;
+}
+
+.inner-win-div {
+  margin: 2.5% 0 0 2.5%;
+  width: 95%;
+  height: 90%;
+  background: #294d67;
+  border: 5px solid white;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  position: relative;
+  text-align: center;
+}
+
+.inner-win-div__outro-text {
+  margin-top: 5%;
+  color: #f4f0f4;
+}
+
+.inner-win-div__arrow-img {
+  position: absolute;
+  top: 45%;
+  right: 5%;
+  width: 15%;
 }
 
 @media (max-width: 768px) {

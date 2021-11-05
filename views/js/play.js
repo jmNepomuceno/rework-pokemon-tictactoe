@@ -14,6 +14,11 @@ const icon_lbl = document.querySelectorAll('label')
 
 const skill_gif_div = document.querySelector('.skill-gif')
 
+const win_div = document.querySelector('.win-div')
+const red_arrow = document.querySelector('.inner-win-div .inner-win-div__arrow-img')
+const win_div_char_txt = document.getElementById('char-text')
+const win_div_faint_txt = document.getElementById('win-faint-text')
+
 let x_o = false
 
 let p1_health_bar_width = p1_health_bar.offsetWidth
@@ -908,11 +913,23 @@ for(let i = 0; i < 2; i++){
     }
 }
 
+const show_win_div = (index) => {
+	win_div.style.display = 'block'
+	//console.log(icon_lbl[index].textContent)
+	win_div_char_txt.textContent = icon_lbl[index].textContent
+
+	red_arrow.addEventListener('click', ()=>{
+		let reverse_index = (index == 1) ? 0 : 1
+		win_div_char_txt.textContent = icon_lbl[reverse_index].textContent
+		win_div_faint_txt.textContent = "wins!"
+	}, false)
+}
+
 const health_bar = (player) => {
     let i = 0
     let player_health_bar = (player == "X") ? p2_health_bar : p1_health_bar
-
-    let player_health_bar_width = (player == "X") ? p2_health_bar_width : p1_health_bar_width
+	//console.log(player_health_bar.id)
+    let player_health_bar_width = (player == "X") ? p1_health_bar_width : p2_health_bar_width
 
     if (i == 0) {
 		
@@ -920,7 +937,8 @@ const health_bar = (player) => {
         var elem = player_health_bar;
 		//console.log(elem)
 
-        var width = player_health_bar_width
+        //var width = player_health_bar_width
+		var width = player_health_bar.offsetWidth
 		//console.log(width)
 
 		to_fix_width = (elem.id == "p1-health") ? to_fix_width_p1 : to_fix_width_p2
@@ -942,8 +960,8 @@ const health_bar = (player) => {
             if (width <= limit) {
                 clearInterval(id);
                 i = 0;
-                if(player_health_bar_width == p1_health_bar_width){
-					//console.log("kyla")
+                if(player_health_bar == p1_health_bar_width){
+					console.log("kyla")
 					//console.log(width)
                     p1_health_bar_width = width
                 }
@@ -961,15 +979,18 @@ const health_bar = (player) => {
 
 				if(width == 0){
 					disable_box();
+					let index_winner = 0
 					if(elem.id == "p2-health"){
 						char_icon[0].src = "/css/imgs/arena/" + win_img_url[icon_lbl[0].textContent]["X"]
 						char_icon[1].src = "/css/imgs/arena/" + win_img_url[icon_lbl[1].textContent]["O"]
-
+						index_winner = 1
 					}else{
 						char_icon[1].src = "/css/imgs/arena/" + win_img_url[icon_lbl[1].textContent]["X"]
 						char_icon[0].src = "/css/imgs/arena/" + win_img_url[icon_lbl[0].textContent]["O"]
-
+						index_winner = 0
 					}
+
+					show_win_div(index_winner)
 				}
 
             } else {
